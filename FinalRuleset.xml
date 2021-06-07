@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<ruleset name="AdL UNI Custom"
+    xmlns="https://pmd.sf.net/ruleset/1.0.0"
+    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://pmd.sf.net/ruleset/1.0.0 https://pmd.sf.net/ruleset_xml_schema.xsd"
+    xsi:noNamespaceSchemaLocation="https://pmd.sf.net/ruleset_xml_schema.xsd">
+  <description>
+  This ruleset checks student code for refactoring possibilties
+  </description>
+
+  <rule ref="category/java/codestyle.xml/ConfusingTernary" />
+  <rule ref="category/java/codestyle.xml/UnnecessaryCast" />
+  <!-- <rule ref="category/java/codestyle.xml/OnlyOneReturn" />
+  <rule ref="category/java/codestyle.xml/UnnecessaryLocalBeforeReturn" /> -->
+
+
+  <rule ref="category/java/design.xml/AvoidDeeplyNestedIfStmts">
+    <properties>
+        <property name="problemDepth" value="3" />
+    </properties>
+  </rule>
+  <rule ref="category/java/design.xml/LawOfDemeter" />
+  <!-- <rule ref="rulesets/java/codesize.xml/CyclomaticComplexity"/>
+  <rule ref="rulesets/java/codesize.xml/NPathComplexity"/> -->
+
+
+  <rule ref="category/java/errorprone.xml/CompareObjectsWithEquals" />
+  <rule ref="category/java/errorprone.xml/EqualsNull" />
+  <rule ref="category/java/errorprone.xml/NullAssignment" />
+  <rule ref="category/java/errorprone.xml/UseEqualsToCompareStrings" />
+  <!-- <rule ref="category/java/errorprone.xml/ReturnEmptyArrayRatherThanNull" /> -->
+
+
+  <!-- <rule ref="category/java/performance.xml/AvoidArrayLoops" /> -->
+  <!-- <rule ref="category/java/performance.xml/RedundantFieldInitializer" /> -->
+  <rule ref="category/java/performance.xml/AvoidInstantiatingObjectsInLoops" />
+  <rule ref="category/java/performance.xml/ConsecutiveAppendsShouldReuse" />
+
+
+</ruleset>
